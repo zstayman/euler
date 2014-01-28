@@ -1,7 +1,14 @@
-group = (1...1000).to_a
+puts "enter the max value"
+max = gets.chomp.to_i
+puts "enter the first number"
+multiple_1 = gets.chomp.to_i
+puts "enter the second number"
+multiple_2 = gets.chomp.to_i
+
+group = (1...max).to_a
 sum = 0
 group.each do |number|
-  if (number % 5 == 0)
+  if (number % multiple_1 == 0)
     sum = sum + number
   elsif number % 3 == 0
     sum = sum + number
