@@ -10,7 +10,7 @@ sum = 0
 group.each do |number|
   if (number % multiple_1 == 0)
     sum = sum + number
-  elsif number % 3 == 0
+  elsif number % multiple_2 == 0
     sum = sum + number
   end
 end
