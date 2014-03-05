@@ -10,13 +10,22 @@
     var recent = 1; 
     var old = 1;
     while (recent < 4000000) {
+      // finds the next fibbonaci number
       var newest = recent + old;
+      
+      // tests to see if it's even and adds it to the sum if it is
+      if(recent % 2 === 0){
+        total = total + recent;
+      };        
+
+      // resets the function for the next number
       old = recent;
       recent = newest;
-      if(recent % 2 === 0){
-        total = total + newest;
-      };        
+      
+
     };
+
+    // when you're done show the sum
     return total;
   };
 
@@ -32,7 +41,22 @@
     };
     return total;
   };
-  
+
+  var recfib = function(num1, num2, total){
+    if (num2 > 4000000) {
+      console.log(total);
+      return total;
+    };
+    var test = num1 + num2;
+    if (test % 2 === 0) {
+      var sum = total + test;
+    } else {
+      var sum = total;
+    };
+   return recfib(num2, test, sum);
+  };
+
+
   </script>
 </body>
 </html>
