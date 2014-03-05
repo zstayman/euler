@@ -6,9 +6,9 @@
   <script type="text/javascript">
     
   var fib = function(){
-    var old = 1;
-    var recent = 1; 
     var total = 0;
+    var recent = 1; 
+    var old = 1;
     while (recent < 4000000) {
       var newest = recent + old;
       old = recent;
@@ -19,6 +19,20 @@
     };
     return total;
   };
+
+  var newfib = function(){
+    var total = 0;
+    var hold = 1;
+    for (var recent = 1; recent < 4000000; recent = recent + old) {
+      var old = hold;
+      var hold = recent;
+      if (recent%2 === 0) {
+        total = total + recent;
+      };
+    };
+    return total;
+  };
+  
   </script>
 </body>
 </html>
